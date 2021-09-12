@@ -1,0 +1,106 @@
+.rounded-10{
+    border-radius: 10px;
+}
+.black-green-link:hover {
+    color: #28a745;
+}
+.green-white-link:hover {
+    color: #28a745;
+}
+
+.text-menu {
+    font-size: 1.3em;
+    color: #000000;
+}
+a {
+    font-family: Century Schoolbook;
+}
+.text-muted {
+    --bs-text-opacity: 1;
+    color: #28a745!important;
+}
+@font-face {
+font-family: 'Ariston';
+src: url('/Kalligrafika/Ariston.ttf');
+}
+.text_effect {
+font-family: 'Ariston';
+}
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    margin: auto;
+}
+.form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    margin-top: 7px;
+    font-size: 16px;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    min-height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+hr {
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+    opacity: 0.15;
+}
+.form-search {
+    position: relative;
+    width: 40vw;
+    height: 10vh;
+}
+
+.form-input {
+    width: 100%;
+    height: 45px;
+    border: 1.5px solid #28a745;
+    border-radius: 5px;
+    outline: none;
+    background: #ffffff;
+    color: #9E9C9C;
+}
+
+.button-search {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 60px;
+    height: 45px;
+    border: none;
+    background: #28a745;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.button-search-icon:before {
+    content: "\f002";
+    font-family: FontAwesome;
+    font-size: 16px;
+    color: #FFFFFF;
+}

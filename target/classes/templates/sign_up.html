@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:insert="blocks/head.html"></head>
+<body>
+<header th:insert="blocks/header.html"></header>
+<div class="container marketing">
+    <div class="row featurette">
+        <hr class="featurette-divider mt-1 mb-md-5">
+        <form class="form-signin">
+            <h1 class="h3 mb-3 font-weight-normal text-center">Регистрация</h1>
+            <input type="name" id="inputLastName" class="form-control" placeholder="Фамилия" required="" autofocus="">
+            <input type="name" id="inputFirstName" class="form-control" placeholder="Имя" required="">
+            <input type="date" id="inputBirth" class="form-control" placeholder="Дата Рождения" required="">
+            <input type="login" id="inputLogin" class="form-control" placeholder="Логин" required="">
+            <input type="password" id="inputPassword" class="form-control" placeholder="Пароль" required="">
+            <button class="btn btn-lg btn-primary btn-block mt-3" type="submit"
+                    style="background-color: #28a745; border: none">Вперед!</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

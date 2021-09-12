@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:insert="blocks/head.html"></head>
+<body>
+<header th:insert="blocks/header.html"></header>
+<main>
+    <div class="container marketing">
+        <div class="row featurette">
+            <hr class="featurette-divider mt-1 mb-md-5">
+            <form class="form-search">
+                <input class="form-input" type="text" placeholder="Искать книгу..." name="id">
+                <button class="button-search button-search-icon" type="submit"></button>
+            </form>
+            <footer th:insert="blocks/footer.html"></footer>
+        </div>
+    </div>
+</main>
+</body>
+</html>
