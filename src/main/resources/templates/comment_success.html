@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Library</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+          integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" th:href="@{/css/style.css}">
+    <link rel="shortcut icon" href="images/logo.svg"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+<header th:insert="blocks/user_header.html"/>
+<div class="container marketing">
+    <div class="row featurette">
+        <hr class="featurette-divider mt-1 mb-md-5">
+        <h4>Спасибо за отзыв!</h4>
+    </div>
+    <div class="row featurette mt-2 mb-0">
+        <a href="/1" style="color: #495057; text-decoration: none;"> ← Вернуться назад</a>
+    </div>
+</div>
+</body>
+</html>

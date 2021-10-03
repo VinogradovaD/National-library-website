@@ -1,20 +1,28 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:insert="blocks/head.html"></head>
+<head>
+    <title>Library</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+          integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" th:href="@{/css/style.css}">
+    <link rel="shortcut icon" href="images/logo.svg"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
 <body>
-<header th:insert="blocks/header.html"></header>
+<header th:insert="${menu}"/>
 <div class="container marketing">
     <div class="row featurette">
         <hr class="featurette-divider mt-1 mb-md-5">
-        <form class="form-signin">
+        <form th:action="@{/sign_up}" method="post" class="form-signin">
             <h1 class="h3 mb-3 font-weight-normal text-center">Регистрация</h1>
-            <input type="name" id="inputLastName" class="form-control" placeholder="Фамилия" required="" autofocus="">
-            <input type="name" id="inputFirstName" class="form-control" placeholder="Имя" required="">
-            <input type="date" id="inputBirth" class="form-control" placeholder="Дата Рождения" required="">
-            <input type="login" id="inputLogin" class="form-control" placeholder="Логин" required="">
-            <input type="password" id="inputPassword" class="form-control" placeholder="Пароль" required="">
+            <label><input type="text" name="lastName" class="form-control" placeholder="Фамилия" required="" autofocus="" style="width: 308px"></label>
+            <label><input type="text" name="firstName" class="form-control" placeholder="Имя" required="" style="width: 308px"></label>
+            <label><input type="text" name="username" class="form-control" placeholder="Логин" required="" style="width: 308px"></label>
+            <label><input type="password" name="password" class="form-control" placeholder="Пароль" required="" style="width: 308px"></label>
             <button class="btn btn-lg btn-primary btn-block mt-3" type="submit"
                     style="background-color: #28a745; border: none">Вперед!</button>
+            <p th:text="${error}" style="color: red"/>
         </form>
     </div>
 </div>

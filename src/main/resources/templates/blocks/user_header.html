@@ -1,24 +1,22 @@
-<!--Шапка для анонимного пользователя-->
-
-<header th:fragment="header">
+<header th:fragment="user_header">
     <nav class="navbar navbar-expand-md mb-md-0">
         <div class="container-fluid rounded-10" style="background-color: #ffffff; width: 73rem; height: 6rem;">
-            <a class="logo" href="/home">
+            <a class="logo" href="/">
                 <img src="images/logo.svg" width="40" height="40">
             </a>
             <div class="collapse navbar-collapse" id="navbarCollapse" style="margin-left: 2rem;">
                 <ul class="navbar-nav mr-auto mb-2 mb-md-0">
                     <li class="nav-item active">
-                        <a class="nav-link text-menu black-green-link" aria-current="page" href="/home">О нас</a>
+                        <a class="nav-link text-menu black-green-link" aria-current="page" href="/">О нас</a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link text-menu black-green-link" aria-current="page"  href="/catalog">Электронная библиотека</a>
                     </li>
                 </ul>
-                <form class="navbar-nav mr-auto mb-2 mb-md-0" style="margin-left: 30rem;">
-                    <a class="nav-link text-menu black-green-link" style="color: #000000" aria-current="page" href="/sign_up">Регистрация</a>
-                    <input type="submit" formaction="/user" method="post" class="btn btn-outline-success"
-                           value="ВХОД" style="text-align: right; height: 47px"/>
+                <form th:action="@{/logout}" method="post" class="navbar-nav mr-auto mb-2 mb-md-0" style="margin-left: 30rem;">
+                    <a class="nav-link text-menu black-green-link" style="color: #000000" aria-current="page" href="/user">Моя страница</a>
+                    <input type="submit" method="post" class="btn btn-outline-success"
+                          value="ВЫХОД" style="text-align: right; height: 47px"/>
                 </form>
             </div>
         </div>

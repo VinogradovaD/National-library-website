@@ -1,18 +1,30 @@
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
-<head th:insert="blocks/head.html"></head>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>Library</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+          integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" th:href="@{/css/style.css}">
+    <link rel="shortcut icon" href="images/logo.svg"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
 <body>
-<header th:insert="blocks/header.html"></header>
+<header th:insert="blocks/header.html"/>
 <div class="container marketing">
     <div class="row featurette">
         <hr class="featurette-divider mt-1 mb-md-5">
-        <form class="form-signin pt-5">
+        <form th:action="@{/login}" method="post" class="form-signin pt-5">
             <h1 class="h3 mb-3 font-weight-normal text-center">Вход</h1>
-            <input type="email" id="inputEmail" class="form-control" placeholder="Логин" required="" autofocus="">
-            <input type="password" id="inputPassword" class="form-control" placeholder="Пароль" required="">
-            <button class="btn btn-lg btn-primary btn-block mt-3" type="submit"
-                    style="background-color: #28a745; border: none">Войти
+            <label><input type="text" name="username" class="form-control" placeholder="Логин" required="" autofocus="" style="width: 308px"></label>
+            <label><input type="password" name="password" class="form-control" placeholder="Пароль" required="" style="width: 308px"></label>
+            <button  class="btn btn-lg btn-primary btn-block mt-3" type="submit"
+                    style="background-color: #28a745; border: none" value="Sign In">Войти
             </button>
+            <div th:if="${param.error}" style="color: red">
+                Неверный логин или пароль.
+            </div>
         </form>
     </div>
 </div>

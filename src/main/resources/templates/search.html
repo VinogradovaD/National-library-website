@@ -10,12 +10,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 <body>
-<header th:insert="${menu}"/>
+<header th:insert="blocks/user_header.html"/>
 <main>
     <div class="container marketing">
         <div class="row featurette">
             <hr class="featurette-divider mt-1 mb-md-5">
-            <form th:action="@{/search}" class="form-search ml-1">
+            <form th:action="@{/catalog}" class="form-search ml-1">
                 <input class="form-input" type="text" placeholder="Искать книгу..." name="title">
                 <button class="button-search button-search-icon" type="submit"></button>
             </form>
@@ -24,17 +24,20 @@
             <table class="mt-3 ml-3" style="border-width: 50px">
                 <tr  th:each="el : ${books}" >
                     <td style="width: 150px">
-                        <img style="border-radius: 3px" th:src="${el.img}" width="120">
+                        <img style="border-radius: 3px" th:src="${el.img}" width="100">
                     </td>
                     <td>
-                        <a th:name="${el.id}"  th:href="${el.id}" style="color: black;">
+                        <a th:href="'/catalog/' + ${el.id}" style="color: black;">
                             <p th:text="${el.title}"/></a>
                         <p th:text="'Автор: ' + ${el.author}"/>
                         <p th:text="'Жанр: ' + ${el.genre}"/>
-                        <p th:text="'Год: ' + ${el.year}"/>
+                        <p th:text="'Рейтинг: ' + ${el.year}"/>
                     </td>
                 </tr>
             </table>
+            <div class="row featurette mt-2 mb-0">
+                <a href="/catalog" style="color: #495057; text-decoration: none;" > ← Вернуться к каталогу</a>
+            </div>
             <footer th:insert="blocks/footer.html"></footer>
         </div>
     </div>
