@@ -1,6 +1,5 @@
 # Сайт для городской библиотеки.
-Сайт в процессе разработки. Планирую использовать такие ЯП как Java, HTML, CSS, JavaScript, так же технологии Spring Framework, Bootstrap, Thymeleaf, Hibernate.
-Пока частично реализован интерфейс, планируется работа с базой данных для хранения книг и пользователей, создание ролей пользователей на сайте.
+Использованные технолгии: Java Spring Boot, Java Spring Security, Bootstrap, Theamleafe, JPA, Hibernate, SQL, CSS, HTML.
 
 ## Главная страница
 <img src= 'screenshots/home.jpg'>
@@ -13,3 +12,9 @@
 
 ## Каталог
 <img src= 'screenshots/catalog.jpg'>
+
+## Подробнее о книге, отзывы
+<img src= 'screenshots/book.jpg'>
+
+## Книжкая полка пользователя
+<img src= 'screenshots/shelf.jpg'>
