@@ -1,5 +1,5 @@
 # Сайт для городской библиотеки.
-Использованные технолгии: Java Spring Boot, Java Spring Security, Bootstrap, Theamleafe, JPA, Hibernate, SQL, CSS, HTML.
+Использованные технолгии: Java Spring, Java Spring Security, Bootstrap, Theamleafe, JPA, Hibernate, SQL, CSS, HTML.
 
 ## Главная страница
 <img src= 'screenshots/home.jpg'>
